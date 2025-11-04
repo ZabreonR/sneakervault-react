@@ -1,0 +1,33 @@
+.section {
+    margin: 40px 0;
+    padding: 24px;
+    background: #0b0f1c;
+    border: 1px solid #22283a;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .subtitle {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-top: 6px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }

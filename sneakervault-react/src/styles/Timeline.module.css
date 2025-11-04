@@ -1,0 +1,96 @@
+.page {
+    background: radial-gradient(circle at top left, #0b0c10, #000);
+    color: #fff;
+    min-height: 100vh;
+    padding: 4rem 8%;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #a855f7, #06b6d4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .hero p {
+    color: #b3b3b3;
+    margin: 0.5rem 0 2rem;
+  }
+  
+  .yearTabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .yearTabs span {
+    padding: 0.5rem 1.2rem;
+    border: 2px solid #7c3aed;
+    border-radius: 8px;
+    color: #bfaeff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .yearTabs span:hover,
+  .yearTabs .active {
+    background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    color: #fff;
+  }
+  
+  .timelineGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .card {
+    background: #0b0c10;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.2);
+    width: 320px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(123, 58, 237, 0.6);
+  }
+  
+  .card img {
+    width: 240px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  
+  .cardInfo h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cardInfo p {
+    color: #b3b3b3;
+  }
+  
+  .viewBtn {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .viewBtn:hover {
+    color: #a855f7;
+  }

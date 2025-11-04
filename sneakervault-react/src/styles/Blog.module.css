@@ -1,0 +1,115 @@
+.page {
+    background: radial-gradient(circle at top left, #0b0c10, #000);
+    color: #fff;
+    min-height: 100vh;
+    padding: 4rem 8%;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #a855f7, #06b6d4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .hero p {
+    color: #b3b3b3;
+    margin-top: 0.5rem;
+  }
+  
+  .blogLayout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .sidebar {
+    flex: 0 0 250px;
+    background: #0b0c10;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(128, 0, 255, 0.2);
+  }
+  
+  .sidebar h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #b3b3b3;
+  }
+  
+  .sidebar li:hover,
+  .sidebar .active {
+    background: #2d1b4b;
+    color: #fff;
+  }
+  
+  .blogGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    flex: 1;
+  }
+  
+  .card {
+    background: #0b0c10;
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 0 15px rgba(123, 58, 237, 0.2);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(123, 58, 237, 0.4);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .readMore {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .readMore:hover {
+    color: #a855f7;
+  }
+  
