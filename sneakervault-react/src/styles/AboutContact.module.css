@@ -142,7 +142,7 @@
   }
 }
 
-/* ✅ Added this only — status message styling */
+/* ✅ Added status message styling */
 .statusMessage {
   margin-top: 15px;
   text-align: center;
@@ -164,4 +164,32 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ✅ Added Meet the Team section */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.teamCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+  text-align: center;
+}
+
+.teamCard h3 {
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.teamCard .role {
+  color: var(--accent2);
+  font-weight: 600;
+  margin-bottom: 10px;
 }

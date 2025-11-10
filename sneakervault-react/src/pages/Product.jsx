@@ -1,10 +1,12 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import styles from "./Product.module.css";
 
 export default function Product() {
   return (
     <>
+      {/* Navbar added globally */}
       <NavBar />
 
       <main className={`container ${styles.page}`}>
@@ -42,11 +44,13 @@ export default function Product() {
           {/* Product Details */}
           <div className={styles.details}>
             <h1>Crimson Velocity</h1>
-            <p className={styles.meta}>Brand: SV Studio • SKU: SV-CV01 • Condition: New</p>
+            <p className={styles.meta}>
+              Brand: SV Studio • SKU: SV-CV01 • Condition: New
+            </p>
             <h2>$199</h2>
             <p className={styles.desc}>
-              Lightweight knit upper with responsive foam midsole. Daily driver built for comfort
-              and style.
+              Lightweight knit upper with responsive foam midsole. Daily driver built for
+              comfort and style.
             </p>
 
             <div className={styles.actions}>

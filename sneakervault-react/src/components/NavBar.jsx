@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <nav className={styles.navbar}>
@@ -25,19 +24,19 @@ export default function NavBar() {
         onClick={() => setMenuOpen(false)}
       >
         <li>
-          <a href="/sneakervault-react/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/sneakervault-react/market">Market</a>
+          <Link to="/market">Market</Link>
         </li>
         <li>
-          <a href="/sneakervault-react/timeline">Timeline</a>
+          <Link to="/timeline">Timeline</Link>
         </li>
         <li>
-          <a href="/sneakervault-react/blog">Blog</a>
+          <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <a href="/sneakervault-react/about-contact">About & Contact</a>
+          <Link to="/about-contact">About & Contact</Link>
         </li>
       </ul>
     </nav>

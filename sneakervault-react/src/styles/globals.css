@@ -1,4 +1,4 @@
-/* === SneakerVault Global Styles (Original Theme) === */
+/* SneakerVault Global Styles (Original Theme)  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
@@ -59,39 +59,7 @@ a:hover {
   color: var(--muted);
 }
 
-/* Header + Nav */
-header {
-  background: linear-gradient(180deg, rgba(15,19,32,.95), rgba(15,19,32,.7));
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(10px);
-}
-
-header .inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-}
-
-header .logo {
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: .1em;
-}
-
-nav a {
-  color: var(--muted);
-  font-weight: 600;
-  margin-left: 18px;
-}
-
-nav a:hover,
-nav a.active {
-  color: #fff;
-  background: rgba(139,92,246,.14);
-  padding: 8px 10px;
-  border-radius: 10px;
-}
+/* === (Old Header + Nav Removed — using NavBar component now) === */
 
 /* Buttons */
 .btn {

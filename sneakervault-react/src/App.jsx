@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Market from "./pages/Market";
 import Product from "./pages/Product";
@@ -11,18 +12,8 @@ import "./styles/globals.css";
 export default function App() {
   return (
     <Router basename="/sneakervault-react">
-      <header className="site-header">
-        <div className="header-inner container">
-          <Link className="logo" to="/">SNEAKERVAULT</Link>
-          <nav className="main-nav">
-            <Link to="/">Home</Link>
-            <Link to="/market">Market</Link>
-            <Link to="/timeline">Timeline</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/about-contact">About & Contact</Link>
-          </nav>
-        </div>
-      </header>
+      {/* Uses NavBar globally (so it appears on every page) */}
+      <NavBar />
 
       <main className="page container">
         <Routes>
@@ -35,6 +26,7 @@ export default function App() {
         </Routes>
       </main>
 
+      {/* footer for consistent branding */}
       <footer className="site-footer">
         <div className="footer-inner container">
           <div>© 2025 SneakerVault</div>

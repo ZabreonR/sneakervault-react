@@ -1,34 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/AboutContact.module.css";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 export default function AboutContact() {
   const [status, setStatus] = useState("idle");
+  const [team, setTeam] = useState([]);
+
+  // ✅ Fetch API Data
+  useEffect(() => {
+    fetch("https://sneakervault-api.onrender.com/api/team")
+      .then((res) => res.json())
+      .then((data) => setTeam(data))
+      .catch((err) => console.error("Error loading team:", err));
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("sending");
-
-    // Simulate "sending"
     setTimeout(() => {
       setStatus("success");
       e.target.reset();
-
-      // Remove message after 6 seconds
       setTimeout(() => setStatus("idle"), 6000);
     }, 1200);
   };
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <main className={styles.contactPage}>
+        {/* === HEADER === */}
         <section className={styles.header}>
           <h1>About & Contact</h1>
           <p>Connecting sneakerheads, resellers, and collectors worldwide.</p>
         </section>
 
+        {/* === ABOUT SECTION === */}
         <section className={styles.aboutSection}>
           <h2>About SneakerVault</h2>
           <p>
@@ -37,15 +44,32 @@ export default function AboutContact() {
             every sneakerhead the tools and knowledge to expand their collection
             and stay ahead of every release.
           </p>
+
+          {/* ✅ Dynamic Team Section */}
+          <h2>Meet the Team</h2>
+          {team.length > 0 ? (
+            <div className={styles.teamGrid}>
+              {team.map((member) => (
+                <div key={member.id} className={styles.teamCard}>
+                  <h3>{member.name}</h3>
+                  <p className={styles.role}>{member.role}</p>
+                  <p>{member.bio}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>Loading team info...</p>
+          )}
         </section>
 
+        {/* === CONTACT SECTION === */}
         <section className={styles.contactSection}>
           <h2>Contact Us</h2>
           <p>Have a question, suggestion, or collab idea? Reach out below!</p>
 
           <div className={styles.contactGrid}>
-            {/* ✅ Purely visual form */}
-            <form onSubmit={handleSubmit} className={styles.contactForm} noValidate>
+            {/* === FORM === */}
+            <form onSubmit={handleSubmit} className={styles.contactForm}>
               <label>
                 Name
                 <input type="text" name="name" placeholder="Your name" required />
@@ -71,21 +95,16 @@ export default function AboutContact() {
                 ></textarea>
               </label>
 
-              <button
-                type="submit"
-                className={styles.submitBtn}
-                disabled={status === "sending"}
-              >
-                {status === "sending" ? "Sending..." : "Send Message"}
+              <button type="submit" className={styles.submitBtn}>
+                {status === "sending"
+                  ? "Sending..."
+                  : status === "success"
+                  ? "Message Sent ✅"
+                  : "Send Message"}
               </button>
-
-              {status === "success" && (
-                <div className={styles.statusMessage}>
-                  ✅ Message sent successfully!
-                </div>
-              )}
             </form>
 
+            {/* === MAP === */}
             <div className={styles.mapContainer}>
               <iframe
                 title="SneakerVault Location"
