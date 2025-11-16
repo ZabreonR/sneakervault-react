@@ -48,7 +48,7 @@ export default function Market() {
 
           <div className={styles.heroImg}>
             <img
-              src={process.env.PUBLIC_URL + "/images/Jordan4.png"}
+              src={process.env.PUBLIC_URL + "images/jordan4cem.png"}
               alt="Featured Sneaker"
             />
           </div>
