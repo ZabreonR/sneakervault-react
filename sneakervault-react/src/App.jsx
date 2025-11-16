@@ -11,8 +11,8 @@ import "./styles/globals.css";
 
 export default function App() {
   return (
-    <Router basename="/sneakervault-react">
-      {/* Uses NavBar globally (so it appears on every page) */}
+    <Router>
+      {/* Uses NavBar globally */}
       <NavBar />
 
       <main className="page container">
@@ -26,7 +26,6 @@ export default function App() {
         </Routes>
       </main>
 
-      {/* footer for consistent branding */}
       <footer className="site-footer">
         <div className="footer-inner container">
           <div>© 2025 SneakerVault</div>
