@@ -1,0 +1,85 @@
+.addPage {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #0b0f1c, #0d1224);
+  color: white;
+}
+
+.addPage h1 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+}
+
+.formBox {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+}
+
+.formBox label {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.formBox input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+
+.formBox button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formBox button:hover {
+  transform: translateY(-2px);
+}
+
+.errorBox {
+  margin-top: 15px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 12px;
+  border-radius: 8px;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+
+.errorText {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.invalid {
+  border: 1px solid #ef4444 !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+}

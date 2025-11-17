@@ -6,28 +6,24 @@ export default function Market() {
   const [sneakers, setSneakers] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const loadSneakers = async () => {
+    try {
+      const res = await fetch("https://sneakervault-api.onrender.com/api/sneakers");
+      const data = await res.json();
+      setSneakers(data);
+      setLoading(false);
+    } catch (err) {
+      console.error("Error loading sneaker data:", err);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    // Load sneakers.json from the public/data folder
-    fetch(process.env.PUBLIC_URL + "/data/sneakers.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to load sneaker data");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setSneakers(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error loading sneaker data:", err);
-        setLoading(false);
-      });
+    loadSneakers();
   }, []);
 
   return (
     <>
-      {/*  Navbar added globally */}
       <NavBar />
 
       <main className={styles.page}>
@@ -75,9 +71,11 @@ export default function Market() {
         ) : (
           <section className={styles.grid}>
             {sneakers.map((shoe) => {
-              const img = process.env.PUBLIC_URL + "/" + shoe.img_name;
+              const img =
+                process.env.PUBLIC_URL + "/" + (shoe.img_name || "images/placeholder.png");
+
               return (
-                <article key={shoe._id} className={styles.card}>
+                <article key={shoe.id} className={styles.card}>
                   <div className={styles.thumb}>
                     <img src={img} alt={shoe.name} />
                   </div>

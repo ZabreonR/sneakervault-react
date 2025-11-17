@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import Timeline from "./pages/Timeline";
 import Blog from "./pages/Blog";
 import AboutContact from "./pages/AboutContact";
+import AddSneaker from "./pages/AddSneaker";  
 import "./styles/globals.css";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/about-contact" element={<AboutContact />} />
+          <Route path="/add-sneaker" element={<AddSneaker />} /> {}
         </Routes>
       </main>
 
