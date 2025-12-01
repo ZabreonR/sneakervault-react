@@ -27,7 +27,6 @@ export default function AboutContact() {
 
   return (
     <>
-      <NavBar />
       <main className={styles.contactPage}>
         {/* === HEADER === */}
         <section className={styles.header}>

@@ -5,7 +5,6 @@ export default function Timeline() {
   return (
     <>
       {/* Navbar added globally */}
-      <NavBar />
 
       <main className={styles.page}>
         <section className={`${styles.hero} reveal`}>

@@ -64,7 +64,6 @@ export default function AddSneaker() {
 
   return (
     <>
-      <NavBar />
       <main className={styles.addPage}>
         <h1>Add New Sneaker</h1>
 

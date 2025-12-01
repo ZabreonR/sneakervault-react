@@ -39,7 +39,7 @@ export default function NavBar() {
           <Link to="/about-contact">About & Contact</Link>
         </li>
 
-        {/* NEW — Add Sneaker link */}
+        {/*Add Sneaker link */}
         <li>
           <Link to="/add-sneaker">Add Sneaker</Link>
         </li>

@@ -26,7 +26,6 @@ export default function Home() {
   return (
     <>
       {/* Navbar added globally */}
-      <NavBar />
 
       <main className={styles.home}>
         {/* Hero Section */}

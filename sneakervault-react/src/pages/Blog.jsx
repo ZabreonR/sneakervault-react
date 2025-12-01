@@ -5,7 +5,6 @@ export default function Blog() {
   return (
     <>
       {/* Navbar added globally */}
-      <NavBar />
 
       <main className={styles.page}>
         <section className={`${styles.hero} reveal`}>

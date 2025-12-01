@@ -7,7 +7,6 @@ export default function Product() {
   return (
     <>
       {/* Navbar added globally */}
-      <NavBar />
 
       <main className={`container ${styles.page}`}>
         <section className={`${styles.panel} reveal`}>
